@@ -1,0 +1,16 @@
+{
+  "name": "asyncEvalDemo",
+  "version": "1.0.0",
+  "description": "samle how to call sync or async fn from just string with function name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rostacik/"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.8.0",
+    "typescript": "next"
+  }
+}

@@ -1,0 +1,7 @@
+/node_modules
+/asyncEvalDemo/bin
+/packages
+/.vs
+/asyncEvalDemo/obj
+/asyncEvalDemo/TS/*.js
+/asyncEvalDemo/TS/*.map
