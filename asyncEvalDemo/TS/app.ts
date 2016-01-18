@@ -15,8 +15,12 @@ $(() => {
                 asyncVersion = fw.getFunctionByName(jsCodeToRunName);
 
                 if (asyncVersion) {
-                    let res = await asyncVersion();
-                    console.log(`async result from function with name ${jsCodeToRunName} was : ${res}`);
+                    if (typeof asyncVersion === "function") {
+                        let res = await asyncVersion();
+                        console.log(`async result from function with name ${jsCodeToRunName} was : ${res}`);
+                    } else {
+                        console.log(`object of type function with name ${jsCodeToRunName} was not found on supplied context`);
+                    }
                 } else {
                     console.log(`async object with name ${jsCodeToRunName} was not found`);
                 }
@@ -24,8 +28,12 @@ $(() => {
                 syncVersion = fw.getFunctionByName(jsCodeToRunName);
 
                 if (syncVersion) {
-                    let res = syncVersion();
-                    console.log(`sync result from function with name ${jsCodeToRunName} was : ${res}`);
+                    if (typeof syncVersion === "function") {
+                        let res = syncVersion();
+                        console.log(`sync result from function with name ${jsCodeToRunName} was : ${res}`);
+                    } else {
+                        console.log(`object of type function with name ${jsCodeToRunName} was not found on supplied context`);
+                    }
                 } else {
                     console.log(`sync object with name ${jsCodeToRunName} was not found`);
                 }

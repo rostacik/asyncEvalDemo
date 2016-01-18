@@ -1,11 +1,7 @@
 ﻿module fw {
     "use strict";
 
-    export function getFunctionByName(functionName: string, context?: any): any {
-        if (!context) {
-            context = window;
-        }
-
+    export function getFunctionByName(functionName: string, context: any = window): any {
         let namespaces: Array<string> = functionName.split(".");
         let func: string = namespaces.pop();
 
